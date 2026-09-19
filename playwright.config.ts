@@ -29,25 +29,32 @@ export default defineConfig({
     // baseURL: 'http://localhost:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
+    trace: 'on',
+    headless:false,
   },
 
   /* Configure projects for major browsers */
   projects: [
-    {
+   {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use: { 
+        browserName:"chromium", 
+        viewport:null, // disable the deafult 1280x720
+        launchOptions:{
+          args:['--start-maximized'],
+        },
+      },
     },
 
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
+    // {
+    //   name: 'firefox',
+    //   use: { ...devices['Desktop Firefox'] },
+    // },
 
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
-    },
+    // {
+    //   name: 'webkit',
+    //   use: { ...devices['Desktop Safari'] },
+    // },
 
     /* Test against mobile viewports. */
     // {
