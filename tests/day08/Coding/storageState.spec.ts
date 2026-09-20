@@ -6,13 +6,13 @@ test("Test to verify Salesforce login and save storage state", async ({ page, co
     await page.goto("https://login.salesforce.com/?locale=in");
 
     // Enter the Salesforce username.
-    await page.getByRole("textbox", { name: "Username" }).fill("seenivasan.shanmugam.c2f550ec7762@agentforce.com");
+    await page.getByRole("textbox", { name: "Username" }).fill("balulingam007.7290e106d962@agentforce.com");
 
     // Click the Salesforce login button.
     await page.getByRole("button", { name: "Log In" }).click();
 
     // Enter the Salesforce password.
-    await page.getByRole("textbox", { name: "Password" }).fill("Test@2026");
+    await page.getByRole("textbox", { name: "Password" }).fill("Sivabalan@97");
 
     // Click the Salesforce login button.
     await page.getByRole("button", { name: "Log In" }).click();

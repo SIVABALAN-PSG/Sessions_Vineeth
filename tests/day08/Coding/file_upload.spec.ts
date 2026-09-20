@@ -8,7 +8,7 @@ test("Test to verify file upload", async ({ page }) => {
 
     // Locate the file upload element.
     await page.getByRole("button", { name: "Choose File" })
-        .setInputFiles(path.join(__dirname, "../../Data/Logo.png"));
+        .setInputFiles(path.join(__dirname, "../../../Data/Testleaf.png"));
 
     // Wait for 7 seconds after uploading the file.
     await page.waitForTimeout(7000);
